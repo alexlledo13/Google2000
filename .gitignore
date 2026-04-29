@@ -1,0 +1,17 @@
+# Datos generados por el crawler (no subir)
+Raiz/
+IN/
+
+# Compilados Java
+*.class
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/.env*.local
+
+# macOS
+.DS_Store
+
+# Claude Code
+.claude/
