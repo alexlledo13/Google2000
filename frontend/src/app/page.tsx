@@ -5,6 +5,18 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen pb-24 px-4">
+      {/* Demo notice */}
+      <div className="fixed top-0 left-0 right-0 bg-yellow-50 border-b border-yellow-200 px-4 py-2 text-center text-xs text-yellow-800 z-50">
+        Esta es una demo del proyecto. El crawler corre en local, por lo que el buscador no devuelve resultados en este entorno.{' '}
+        <a
+          href="https://github.com/alexlledo13/Google2000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-medium hover:text-yellow-900"
+        >
+          Ver código en GitHub
+        </a>
+      </div>
       {/* Logo */}
       <div className="mb-6 text-center">
         <span className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight select-none">

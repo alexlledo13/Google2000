@@ -22,6 +22,18 @@ export default async function SearchPage({ searchParams }: { searchParams: Searc
 
   return (
     <div className="min-h-screen">
+      {/* Demo notice */}
+      <div className="bg-yellow-50 border-b border-yellow-200 px-4 py-2 text-center text-xs text-yellow-800">
+        Demo sin datos — el crawler corre en local.{' '}
+        <a
+          href="https://github.com/alexlledo13/Google2000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-medium"
+        >
+          Ver código en GitHub
+        </a>
+      </div>
       {/* Top bar */}
       <div className="flex items-center gap-2 sm:gap-4 px-3 sm:px-6 py-3 border-b border-gray-200">
         <a href="/" className="text-xl sm:text-2xl font-bold shrink-0 select-none">
@@ -107,14 +119,21 @@ function ResultItem({ result }: { result: SearchResult }) {
 function NoResults({ query }: { query: string }) {
   return (
     <div className="text-sm text-gray-700">
+      <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded text-yellow-800 text-xs leading-relaxed">
+        <strong className="block mb-1">Demo sin datos</strong>
+        El crawler de este proyecto corre en local e indexa páginas en disco. En esta versión desplegada no hay datos disponibles, por lo que las búsquedas no devuelven resultados.{' '}
+        <a
+          href="https://github.com/alexlledo13/Google2000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline font-medium hover:text-yellow-900"
+        >
+          Ver el código en GitHub
+        </a>
+      </div>
       <p>
         No se encontraron resultados para <strong>&ldquo;{query}&rdquo;</strong>.
       </p>
-      <ul className="mt-3 list-disc pl-5 space-y-1 text-gray-600">
-        <li>Comprueba que todas las palabras están bien escritas.</li>
-        <li>Prueba con términos más generales.</li>
-        <li>Prueba con menos palabras.</li>
-      </ul>
     </div>
   )
 }
